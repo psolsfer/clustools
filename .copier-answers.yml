@@ -1,0 +1,30 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY.
+_commit: 274caad
+_src_path: https://github.com/psolsfer/copier-pypackage-uv
+command_line_interface: No CLI
+create_author_file: true
+development_environment: strict
+docs: Read the docs
+docstring_style: numpy
+email: psolsfer@gmail.com
+formatter: Ruff-format
+full_name: Pablo Solís-Fernández
+github_username: psolsfer
+open_source_license: BSD-3-Clause
+package_command_line_name: clustools
+package_distribution_name: clustools
+package_import_name: clustools
+private_package_repository_name: ''
+project_name: clustools
+project_short_description: A lightweight Python package providing essential clustering
+    utilities for clustering workflows.
+pypi_username: psolsfer
+python_version: '3.12'
+repository_name: clustools
+repository_namespace: psolsfer
+repository_provider: github.com
+use_pytest: true
+version: 0.1.0
+with_jupyter_lab: false
+with_pydantic_typing: false
+
