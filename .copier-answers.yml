@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY.
-_commit: 274caad
+_commit: '9321845'
 _src_path: https://github.com/psolsfer/copier-pypackage-uv
 command_line_interface: No CLI
 create_author_file: true
@@ -16,15 +16,14 @@ package_distribution_name: clustools
 package_import_name: clustools
 private_package_repository_name: ''
 project_name: clustools
-project_short_description: A lightweight Python package providing essential clustering
-    utilities for clustering workflows.
+project_short_description: A lightweight Python package providing essential clustering utilities for clustering workflows.
 pypi_username: psolsfer
 python_version: '3.12'
 repository_name: clustools
 repository_namespace: psolsfer
 repository_provider: github.com
 use_pytest: true
-version: 0.1.0
+version: 0.2.0
 with_jupyter_lab: false
 with_pydantic_typing: false
 
