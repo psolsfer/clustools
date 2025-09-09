@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 
 
 def get_unique_labels(
-    labels: NDArray[np.int_], noise_labels: NDArray[np.int_] | Sequence[int] | None
+    labels: NDArray[np.int_], noise_labels: NDArray[np.int_] | Sequence[int] | None = None
 ) -> NDArray[np.int_]:
     """Calculate unique non-noise labels (noise == -1)."""
     if noise_labels is None:
