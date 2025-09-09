@@ -1,13 +1,7 @@
-<style>
-p[align="center"] {
-  margin: 0px 0;  /* adjust as needed */
-}
-</style>
-
 # clustools
 
 <!-- Project Badges -->
-<p align="center">
+<div align="center">
       <a href="https://clustools.readthedocs.io/en/stable/">
         <img src="https://readthedocs.org/projects/clustools/badge/?version=stable" alt="Documentation Status"/>
       </a>
@@ -20,9 +14,9 @@ p[align="center"] {
     <a href="https://pypi.org/project/clustools/">
       <img src="https://img.shields.io/pypi/pyversions/clustools.svg?logo=python&label=Python&logoColor=gold" alt="PyPI - Python Version"/>
     </a>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <a href="https://github.com/psolsfer/clustools/actions/workflows/test-push-pr.yml">
     <img src="https://github.com/psolsfer/clustools/actions/workflows/test-push-pr.yml/badge.svg" alt="CI - Test"/>
   </a>
@@ -38,9 +32,9 @@ p[align="center"] {
   <a href="https://github.com/psolsfer/clustools/issues">
     <img src="https://img.shields.io/github/issues/psolsfer/clustools.svg" alt="GitHub issues"/>
   </a>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <a href="https://spdx.org/licenses/BSD-3-Clause.html">
     <img src="https://img.shields.io/pypi/l/clustools.svg" alt="License - BSD-3-Clause"/>
   </a>
@@ -53,9 +47,9 @@ p[align="center"] {
   <a href="https://mypy-lang.org/">
     <img src="https://www.mypy-lang.org/static/mypy_badge.svg" alt="Types - Mypy"/>
   </a>
-</p>
+</div>
 
-<p align="center" style="margin: 20px 0;">
+<div align="center" style="margin: 20px 0;">
   <a href="https://github.com/psolsfer/clustools">GitHub</a>
   &middot;
   <a href="https://pypi.org/project/clustools/">PyPI</a>
@@ -63,7 +57,7 @@ p[align="center"] {
   <a href="https://clustools.readthedocs.io/en/stable/">Docs</a>
   &middot;
   <a href="https://github.com/psolsfer/clustools/issues">Issues</a>
-</p>
+</div>
 
 A lightweight Python package that extends scikit-learn's clustering ecosystem with additional algorithms and utilities. Features sklearn-compatible wrappers for Fuzzy C-Means, Faiss-based clustering, and supplementary functions for comprehensive clustering workflows.
 
