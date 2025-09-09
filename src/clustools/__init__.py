@@ -5,4 +5,4 @@ A lightweight Python package providing essential clustering utilities for cluste
 
 __author__ = """Pablo Solís-Fernández"""
 __email__ = "psolsfer@gmail.com"
-__version__ = "0.1.1"
+__version__ = "0.2.0"
