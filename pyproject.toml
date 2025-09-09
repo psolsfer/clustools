@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.8.5,<0.9.0"]
+build-backend = "uv_build"
 
 [project]
 name = "clustools"
@@ -12,6 +12,7 @@ authors = [
 readme = "README.md"
 keywords = ["clustools"]
 license = "BSD-3-Clause-Clear"
+license-files = ["LICENSE"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
@@ -36,26 +37,6 @@ Homepage = "https://github.com/psolsfer/clustools"
 Repository = "https://github.com/psolsfer/clustools"
 Documentation = "https://clustools.readthedocs.io"
 Issues = "https://github.com/psolsfer/clustools/issues"
-
-[tool.hatch.build]
-packages = ["src/clustools"]
-include = [
-    "AUTHORS.md",
-    "CONTRIBUTING.md",
-    "HISTORY.md",
-    "LICENSE",
-    "py.typed",
-    "README.md",
-    "tests/**/*",
-    "docs/**/*.{md,py,jpg,png,gif}",
-]
-exclude = [
-    "**/__pycache__",
-    "**/*.py[co]",
-]
-
-[tool.hatch.metadata]
-allow-direct-references = true
 
 [tool.uv]
 default-groups = ["dev", "test", "docs"]
