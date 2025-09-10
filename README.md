@@ -75,8 +75,12 @@ import clustools
 git clone https://github.com/psolsfer/clustools.git
 cd clustools
 uv sync
-uv run pre-commit install
 ```
+Install the prek git hook
+```bash
+uv run prek install
+```
+
 
 ### Running Tests
 ```bash
@@ -97,16 +101,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Credits
 
-This package was created with [Copier](https://github.com/copier-org/copier) and the [Copier PyPackage uv](https://github.com/psolsfer/copier-pypackage-uv) project template.
+This package was created with [Copier](https://github.com/copier-org/copier) and the [Copier PyPackage uv](https://github.com/psolsfer/uvcopier) project template.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [docs-read-badge]: https://readthedocs.org/projects/clustools/badge/?version=stable&style=for-the-badge
 [docs-read-url]: https://clustools.readthedocs.io/en/stable/
-
-[docs-git-badge]: https://img.shields.io/badge/docs-online-blue.svg&style=for-the-badge
-[docs-git-url]: https://psolsfer.github.io/clustools/
 
 [license-badge]: https://img.shields.io/pypi/l/clustools.svg?style=for-the-badge
 [license-url]: https://spdx.org/licenses/BSD-3-Clause.html
@@ -120,23 +121,20 @@ This package was created with [Copier](https://github.com/copier-org/copier) and
 [ci-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/test-push-pr.yml?style=for-the-badge
 [ci-url]: https://github.com/psolsfer/clustools/actions/workflows/test-push-pr.yml
 
-[cd-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/python-publish.yml?style=for-the-badge  
+[cd-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/python-publish.yml?style=for-the-badge
 [cd-url]: https://github.com/psolsfer/clustools/actions/workflows/python-publish.yml
 
-[stars-badge]: https://img.shields.io/github/stars/psolsfer/clustools.svg?style=for-the-badge  
-[forks-badge]: https://img.shields.io/github/forks/psolsfer/clustools.svg?style=for-the-badge   
+[stars-badge]: https://img.shields.io/github/stars/psolsfer/clustools.svg?style=for-the-badge
+[forks-badge]: https://img.shields.io/github/forks/psolsfer/clustools.svg?style=for-the-badge
 
-[issues-badge]: https://img.shields.io/github/issues/psolsfer/clustools.svg?style=for-the-badge      
+[issues-badge]: https://img.shields.io/github/issues/psolsfer/clustools.svg?style=for-the-badge
 [issues-url]: https://github.com/psolsfer/clustools/issues
 
 [github-url]: https://github.com/psolsfer/clustools
 
 [ruff-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&style=for-the-badge
 [ruff-url]: https://github.com/astral-sh/ruff
-
 [formatter-ruff-badge]: https://img.shields.io/badge/Ruff%20Formatter-checked-blue.svg?style=for-the-badge
-[formatter-black-badge]: https://img.shields.io/badge/Black%20Formatter-checked-blue.svg?style=for-the-badge
-[black-url]: https://github.com/psf/black
 
 [mypy-badge]: https://img.shields.io/badge/mypy%20-%20checked-blue?style=for-the-badge
 [mypy-url]: https://mypy-lang.org/

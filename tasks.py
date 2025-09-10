@@ -1,5 +1,4 @@
-"""
-Tasks for maintaining the clustools package.
+"""Tasks for maintaining the clustools package.
 
 Execute 'invoke --list' for guidance on using Invoke
 """
@@ -212,15 +211,14 @@ def install_package(c: Context) -> None:
     _run(c, "uv sync")
 
 
-@task
-def pre_commit_install(c: Context) -> None:
-    """Install pre-commit hooks."""
-    _run(c, "pre-commit install")
+def prek_install(c: Context) -> None:
+    """Install prek hooks."""
+    _run(c, "prek install")
 
 
-@task(pre=[install_package, pre_commit_install])
+@task(pre=[install_package, prek_install])
 def install(c: Context) -> None:
-    """Install the package and the pre-commit hooks."""
+    """Install the package and the prek hooks."""
 
 
 # pipx

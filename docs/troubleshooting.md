@@ -33,7 +33,7 @@ If tests are failing in your development environment:
 1. Install development dependencies: `uv sync`
 2. Check Python version compatibility
 3. Run tests individually to isolate issues:
-   
+
    ```bash
    uv run pytest tests/test_specific.py -v
    ```

@@ -54,6 +54,16 @@ Ready to contribute? Here's how to set up `clustools` for local development.
    ```bash
    cd clustools
    uv sync
+   ```
+   install pre-commits:
+
+   ```bash
+   uv run prek install
+   ```
+
+   or
+
+   ```bash
    uv run pre-commit install
    ```
 
