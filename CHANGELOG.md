@@ -1,3 +1,13 @@
+## v0.2.1 (2025-09-10)
+
+### Feat
+
+- add function to compute co-association matrix
+
+### Refactor
+
+- **package**: reorganize modules into clusterers, metrics, matrices, utils
+
 ## v0.2.0 (2025-09-09)
 
 ### Refactor
