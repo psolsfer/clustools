@@ -1,4 +1,4 @@
-"""Compute the co-association matrix."""
+"""Compute a co-association matrix."""
 
 from collections.abc import Sequence
 
@@ -35,10 +35,10 @@ def coassociation_matrix(
     --------
     >>> import numpy as np
     >>> labels = np.array([
-    >>> [0, 1, -1, -1],
-    >>> [0, 1, 2, -1],
-    >>> [0, 1, 1, -1],
-    >>> ])
+    ... [0, 1, -1, -1],
+    ... [0, 1, 2, -1],
+    ... [0, 1, 1, -1],
+    ... ])
     >>> C = coassociation_matrix(labels, ignore_noise=True, noise_labels=[-1])
 
     Notes
