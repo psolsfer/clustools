@@ -1,4 +1,4 @@
-"""Compute inertia."""
+"""Internal clustering validation metrics (no ground truth required)."""
 
 import numpy as np
 from numpy.typing import ArrayLike, NDArray
@@ -17,16 +17,15 @@ def compute_inertia(X: ArrayLike, labels: ArrayLike, cluster_centers: ArrayLike)
     X : array-like of shape (n_samples, n_features)
         Input data.
     labels : array-like of shape (n_samples,)
-        Cluster labels for each sample. Each entry should be an integer
-        index into `cluster_centers`.
+        Cluster labels for each sample. Each entry should be an integer index into
+        `cluster_centers`.
     cluster_centers : array-like of shape (n_clusters, n_features)
         Coordinates of cluster centers.
 
     Returns
     -------
     inertia : float
-        The sum of squared distances of each sample to its assigned
-        cluster center.
+        The sum of squared distances of each sample to its assigned cluster center.
     """
     X = np.asarray(X)
     labels = np.asarray(labels, dtype=int)

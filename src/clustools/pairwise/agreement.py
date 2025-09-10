@@ -1,4 +1,4 @@
-"""Compute a co-association matrix."""
+"""Pairwise agreement and similarity matrices between clustering results."""
 
 from collections.abc import Sequence
 

@@ -1,4 +1,4 @@
-"""Utility functions for handling labels, cluster centers, and related tasks."""
+"""Utility functions for clustering workflows."""
 
 from clustools.utils import cluster_centers, labels
 

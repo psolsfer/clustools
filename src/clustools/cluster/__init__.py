@@ -1,4 +1,4 @@
-"""Sklearn-compatible wrappers for clustering algorithms."""
+"""Sklearn-compatible clustering algorithm implementations."""
 
 from clustools.cluster._faiss import FaissKMeans, FaissLSH
 from clustools.cluster._fuzzy import FuzzyCMeans
