@@ -10,7 +10,7 @@ from sklearn.cluster._kmeans import _labels_inertia
 from sklearn.utils._openmp_helpers import _openmp_effective_n_threads
 from sklearn.utils.parallel import _threadpool_controller_decorator
 
-from clustools.common.labels import filter_noise_labels, get_unique_labels
+from clustools.utils.labels import filter_noise_labels, get_unique_labels
 
 if TYPE_CHECKING:
     from collections.abc import Sequence

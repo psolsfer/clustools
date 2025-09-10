@@ -11,7 +11,7 @@ from sklearn.utils._param_validation import Interval, StrOptions
 from sklearn.utils.validation import check_is_fitted, validate_data
 
 from clustools.cluster.custom_cluster_mixin import CustomClusterMixin
-from clustools.common.inertia import compute_inertia
+from clustools.metrics.inertia import compute_inertia
 
 # ruff: noqa: N803, N806
 
