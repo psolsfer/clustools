@@ -1,3 +1,13 @@
+## v0.3.0 (2025-09-11)
+
+### Feat
+
+- **pairwise**: add ari matrix calculations and normalize functions input
+
+### Refactor
+
+- restructure package modules for better organization
+
 ## v0.2.1 (2025-09-10)
 
 ### Feat
