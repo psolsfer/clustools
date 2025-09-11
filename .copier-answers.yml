@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY.
-_commit: 9e039a7
+_commit: 76d16f2
 _src_path: gh:psolsfer/uvcopier
 command_line_interface: No CLI
 create_author_file: true
@@ -25,7 +25,7 @@ repository_name: clustools
 repository_namespace: psolsfer
 repository_provider: github.com
 use_pytest: true
-version: 0.2.0
+version: 0.2.1
 with_jupyter_lab: false
 with_pydantic_typing: false
 

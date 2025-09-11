@@ -52,7 +52,7 @@ jobs:
       run: uv run mypy src/clustools
 
     - name: Run security checks
-      run: uv run safety check
+      run: uv run pip-audit
 
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v4
