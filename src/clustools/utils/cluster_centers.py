@@ -92,7 +92,7 @@ def compute_cluster_centers(
 
 def compute_batch_cluster_centers(
     X: ArrayLike,
-    cluster_results: list[NDArray[np.int_]],
+    labelings: list[NDArray[np.int_]],
     method: Literal["mean", "median", "medoid"] = "mean",
     noise_labels: NDArray[np.int_] | Sequence[int] | None = None,
 ) -> list[NDArray[np.floating]]:
@@ -105,7 +105,7 @@ def compute_batch_cluster_centers(
     ----------
     X : ArrayLike
         Input data array with shape (n_samples, n_features)
-    cluster_results : list[NDArray[np.int_]]
+    labelings : list[NDArray[np.int_]]
         List of cluster label arrays, one per clustering run
     method : {"mean", "median", "medoid"}, default="mean"
         Method for computing cluster centers:
@@ -134,7 +134,7 @@ def compute_batch_cluster_centers(
     X_array = np.asarray(X)
     cluster_centers: list[NDArray[np.floating]] = []
 
-    for labels in cluster_results:
+    for labels in labelings:
         centers = compute_cluster_centers(
             X=X_array, labels=labels, method=method, noise_labels=noise_labels
         )
