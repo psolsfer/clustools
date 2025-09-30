@@ -6,6 +6,8 @@ import numpy as np
 from numpy.typing import NDArray
 from sklearn.metrics import adjusted_rand_score, pairwise_distances
 
+from clustools.utils.labels import is_valid_label
+
 # ruff: noqa: ERA001
 
 
@@ -31,7 +33,7 @@ def _input_conversion(
 def coassociation_matrix(
     labelings: NDArray[np.integer] | Sequence[NDArray[np.integer]],
     ignore_noise: bool = True,
-    noise_labels: Sequence[int] = (-1,),
+    noise_labels: Sequence[int] | None = None,
 ) -> NDArray[np.floating]:
     """Compute a co-association (pairwise agreement) matrix from multiple labelings.
 
@@ -79,7 +81,7 @@ def coassociation_matrix(
     for clusterer_labels in labelings:
         if ignore_noise:
             # Mark valid points (not noise)
-            valid_mask = ~np.isin(clusterer_labels, noise_labels)
+            valid_mask = is_valid_label(clusterer_labels, noise_labels)
             valid_labels = clusterer_labels[valid_mask]
 
             # Pairwise equality for valid samples only
