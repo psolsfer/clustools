@@ -1,3 +1,14 @@
+## v0.3.1 (2025-09-30)
+
+### Feat
+
+- **pairwise.distances**: add overlap_distance_matrix
+- add filter_noisy_aligned utility to remove noise across multiple aligned label arrays
+
+### Refactor
+
+- **utils.cluster_centers**: homogeneize args naming with the rest of package
+
 ## v0.3.0 (2025-09-11)
 
 ### Feat
