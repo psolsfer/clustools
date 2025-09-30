@@ -33,7 +33,6 @@ def _input_conversion(
 
 def coassociation_matrix(
     labelings: NDArray[np.integer] | Sequence[NDArray[np.integer]],
-    ignore_noise: bool = True,
     noise_labels: Sequence[int] | None = None,
 ) -> NDArray[np.floating]:
     """Compute a co-association (pairwise agreement) matrix from multiple labelings.
@@ -51,7 +50,9 @@ def coassociation_matrix(
         If True, samples with labels in ``noise_labels`` are ignored in each labeling. If False,
         noise is treated as just another label.
     noise_labels : sequence of int, default=(-1,)
-        Label(s) to be treated as noise when ``ignore_noise=True``.
+        Label(s) to be excluded from contributing to the co-association matrix.
+        Typically used to ignore noise or outlier labels (e.g., ``-1`` from DBSCAN).
+        If ``None``, no labels are excluded and all samples are included in the computation.
 
     Returns
     -------
@@ -67,7 +68,7 @@ def coassociation_matrix(
     ... [0, 1, 2, -1],
     ... [0, 1, 1, -1],
     ... ])
-    >>> C = coassociation_matrix(labels, ignore_noise=True, noise_labels=[-1])
+    >>> C = coassociation_matrix(labels, noise_labels=[-1])
 
     Notes
     -----
@@ -80,7 +81,7 @@ def coassociation_matrix(
     n_valid = np.zeros((n_samples, n_samples), dtype=int)
 
     for clusterer_labels in labelings:
-        if ignore_noise:
+        if noise_labels is not None:
             # Mark valid points (not noise)
             valid_mask = is_valid_label(clusterer_labels, noise_labels)
             valid_labels = clusterer_labels[valid_mask]

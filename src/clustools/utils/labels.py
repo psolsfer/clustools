@@ -6,8 +6,6 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from clustools.utils.constants import NOISY_LABELS
-
 if TYPE_CHECKING:
     from collections.abc import Sequence
 
@@ -24,8 +22,9 @@ def is_valid_label(
     ----------
     labels : ndarray of int
         Cluster labels.
-    noise_labels : sequence of int, optional
-        Labels to treat as noise. Default is [-1].
+    noise_labels : sequence of int or array-like, optional (default=None)
+        Label(s) to treat as noise.
+        If ``None``, no labels are excluded (all labels are returned)
 
     Returns
     -------
@@ -33,7 +32,7 @@ def is_valid_label(
         True for valid labels, False for noise.
     """
     if noise_labels is None:
-        noise_labels = NOISY_LABELS
+        return np.ones_like(labels, dtype=bool)
     return ~np.isin(labels, noise_labels)
 
 
@@ -46,9 +45,9 @@ def get_unique_labels(
     ----------
     labels : ndarray of int
         Cluster labels.
-    noise_labels : sequence of int, optional
-        Labels to treat as noise (excluded from the result).
-        Default is [-1].
+    noise_labels : sequence of int or array-like, optional (default=None)
+        Label(s) to treat as noise and exclude from the result.
+        If ``None``, no labels are excluded (all labels are returned).
 
     Returns
     -------
@@ -56,7 +55,7 @@ def get_unique_labels(
         Sorted array of unique labels with noise removed.
     """
     if noise_labels is None:
-        noise_labels = NOISY_LABELS
+        noise_labels = np.array([])
     return np.setdiff1d(labels, noise_labels, assume_unique=False)
 
 
@@ -70,9 +69,9 @@ def filter_noise_labels(
     ----------
     labels : ndarray of int
         Cluster labels.
-    noise_labels : sequence of int, optional
-        Labels to treat as noise (removed from the result).
-        Default is [-1].
+    noise_labels : sequence of int or array-like, optional (default=None)
+        Label(s) to treat as noise and filter from the result.
+        If ``None``, no labels are filtered (all labels are returned)
 
     Returns
     -------
@@ -93,8 +92,9 @@ def filter_noisy_aligned(
     ----------
     *labels : sequence of ndarray of int
         One or more aligned label arrays (same length).
-    noise_labels : sequence of int, optional
-        Labels considered as noise. Default is [-1].
+    noise_labels : sequence of int or array-like, optional (default=None)
+        Label(s) to treat as noise and filter from the result.
+        If ``None``, no labels are filtered (all labels are returned)
 
     Returns
     -------

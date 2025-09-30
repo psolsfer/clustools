@@ -41,7 +41,7 @@ def compute_cluster_centers(
         - "median": Component-wise median
         - "medoid": Actual data point closest to center
     noise_labels : list[int] or NDArray[np.int_], optional
-        Labels to treat as noise (ignored). Default is [-1].
+        Labels to treat as noise (ignored). Default is None.
     unique_labels : NDArray[np.int_], optional
         Precomputed unique labels. If None, will compute them from `labels`.
 
@@ -113,7 +113,7 @@ def compute_batch_cluster_centers(
         - "median": Component-wise median (robust to outliers)
         - "medoid": Actual data point closest to center (most representative)
     noise_labels : list[int] or NDArray[np.int_], optional
-        Labels to treat as noise (ignored). Default is [-1].
+        Labels to treat as noise (ignored). Default is None.
 
     Returns
     -------

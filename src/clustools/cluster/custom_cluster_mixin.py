@@ -12,7 +12,6 @@ from sklearn.utils.validation import check_is_fitted
 # ruff: noqa: ERA001
 
 
-# ISSUE #49
 class CustomClusterMixin(ClusterMixin, BaseEstimator):
     """Mixin class providing common functionality for custom clustering algorithm wrappers.
 
