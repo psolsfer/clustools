@@ -14,6 +14,7 @@ from numpy.typing import NDArray
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics.cluster import contingency_matrix
 
+from clustools.utils.constants import DEFAULT_CENTER_WEIGHT
 from clustools.utils.labels import filter_noisy_aligned
 from clustools.utils.matrices import normalize_matrix
 
@@ -117,8 +118,7 @@ def cluster_similarity_matrix(  # noqa: PLR0913
         Metric for overlap similarity (used if similarity_method="overlap" or "combined").
     center_weight : float, optional
         Weight for center distance when similarity_method="combined". Must be in [0, 1].
-    overlap_weight : float, optional
-        Weight for overlap when similarity_method="combined". Must be in [0, 1].
+        The weight for overlap will be calculated as the difference 1-center_weight.
 
     Returns
     -------
@@ -144,8 +144,8 @@ def cluster_similarity_matrix(  # noqa: PLR0913
             msg = "centers_x, centers_y, labels_x, and labels_y are all required for 'combined'"
             raise ValueError(msg)
         # Defaults
-        center_weight = 0.5 if center_weight is None else center_weight
-        overlap_weight = 0.5 if overlap_weight is None else overlap_weight
+        center_weight = DEFAULT_CENTER_WEIGHT if center_weight is None else center_weight
+        overlap_weight = 1 - center_weight
 
         # Compute both components
         center_costs = pairwise_distances(centers_x, centers_y, metric=distance_metric)
