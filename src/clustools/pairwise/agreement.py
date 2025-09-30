@@ -7,6 +7,7 @@ from numpy.typing import NDArray
 from sklearn.metrics import adjusted_rand_score, pairwise_distances
 
 from clustools.utils.labels import is_valid_label
+from clustools.utils.matrices import normalize_matrix
 
 # ruff: noqa: ERA001
 
@@ -98,15 +99,9 @@ def coassociation_matrix(
             n_valid += 1
 
     # Normalize by number of valid comparisons
-    with np.errstate(divide="ignore", invalid="ignore"):
-        coassoc_matrix = np.divide(
-            coassoc_matrix,
-            n_valid,
-            out=np.zeros_like(coassoc_matrix, dtype=float),
-            where=n_valid > 0,
-        )
+    coassoc_matrix = normalize_matrix(coassoc_matrix, method="elementwise", weights=n_valid)
 
-    return coassoc_matrix  # type: ignore[no-any-return]
+    return coassoc_matrix
 
 
 def pairwise_ari_matrix(
