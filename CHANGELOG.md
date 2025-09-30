@@ -1,3 +1,11 @@
+## v0.3.2 (2025-09-30)
+
+### Feat
+
+- add function cluster_similarity_matrix
+- add function to normalize matrices
+- add is_valid_label to mask noise
+
 ## v0.3.1 (2025-09-30)
 
 ### Feat
