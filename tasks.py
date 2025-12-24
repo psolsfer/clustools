@@ -215,11 +215,9 @@ def prek_install(c: Context) -> None:
     """Install prek hooks."""
     _run(c, "prek install")
 
-
 @task(pre=[install_package, prek_install])
 def install(c: Context) -> None:
     """Install the package and the prek hooks."""
-
 
 # pipx
 @task
