@@ -6,6 +6,7 @@
 [![Documentation Status][docs-read-badge]][docs-read-url]
 [![License - BSD-3-Clause][license-badge]][license-url]<br/>
 [![PyPI - Version][pypi-badge]][pypi-url] [![PyPI - Downloads][pypi-downloads]][pypi-url] [![PyPI - Python Version][python-versions]][pypi-url]<br/>
+[![GitHub commit activity][commit-activity]][github-commits] [![GitHub commits since latest release][commits-since-latest]][github-commits] [![GitHub last commit][last-commit]][last-commit-url] [![GitHub Release Date][release-date]][release-date-url]<br/>
 [![CI - Tests][ci-badge]][ci-url] [![CD - Publish][cd-badge]][cd-url] [![GitHub stars][stars-badge]][github-url] [![GitHub forks][forks-badge]][github-url] [![GitHub issues][issues-badge]][issues-url]<br/>
 [![Linting - Ruff][ruff-badge]][ruff-url]
 [![Formatter - Ruff][formatter-ruff-badge]][ruff-url]
@@ -76,11 +77,12 @@ git clone https://github.com/psolsfer/clustools.git
 cd clustools
 uv sync
 ```
+
 Install the prek git hook
+
 ```bash
 uv run prek install
 ```
-
 
 ### Running Tests
 ```bash
@@ -115,13 +117,21 @@ This package was created with [Copier](https://github.com/copier-org/copier) and
 [pypi-badge]: https://img.shields.io/pypi/v/clustools.svg?logo=pypi&label=PyPI&logoColor=gold&style=for-the-badge
 [pypi-url]: https://pypi.org/project/clustools/
 
+[commit-activity]: https://img.shields.io/github/commit-activity/t/psolsfer/clustools?logo=github&label=Commits&style=for-the-badge
+[commits-since-latest]: https://img.shields.io/github/commits-since/psolsfer/clustools/latest?logo=github&style=for-the-badge
+[last-commit]: https://img.shields.io/github/last-commit/psolsfer/clustools?logo=github&label=Last%20Commit&style=for-the-badge
+[release-date]: https://img.shields.io/github/release-date/psolsfer/clustools?logo=github&label=Release%20Date&style=for-the-badge
+[last-commit-url]: https://github.com/psolsfer/clustools/commit/main
+[release-date-url]: https://github.com/psolsfer/clustools/releases/latest
+[github-commits]: https://github.com/psolsfer/clustools/commits/main/
+
 [pypi-downloads]: https://img.shields.io/pypi/dm/clustools.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold&style=for-the-badge
 [python-versions]: https://img.shields.io/pypi/pyversions/clustools.svg?logo=python&label=Python&logoColor=gold&style=for-the-badge
 
-[ci-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/test-push-pr.yml?style=for-the-badge
+[ci-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/test-push-pr.yml?style=for-the-badge&label=CI-Build%20%26%20Test
 [ci-url]: https://github.com/psolsfer/clustools/actions/workflows/test-push-pr.yml
 
-[cd-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/python-publish.yml?style=for-the-badge
+[cd-badge]: https://img.shields.io/github/actions/workflow/status/psolsfer/clustools/python-publish.yml?style=for-the-badge&label=Release
 [cd-url]: https://github.com/psolsfer/clustools/actions/workflows/python-publish.yml
 
 [stars-badge]: https://img.shields.io/github/stars/psolsfer/clustools.svg?style=for-the-badge

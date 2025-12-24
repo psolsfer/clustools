@@ -14,7 +14,7 @@ To install clustools in your project, choose your preferred package manager:
 
 === ":simple-uv: uv (recommended for new projects)"
 
-    First, install [uv] if you haven't already (for more detailed instructions refer to [uv installation]):
+    First, install [uv] if you haven't already (for more detailed instructions refer to [uv installation] in the official documentation):
 
     ```bash linenums="0"
     # Windows (PowerShell)
@@ -39,7 +39,7 @@ To install clustools in your project, choose your preferred package manager:
 
 === ":simple-poetry: Poetry"
 
-    First, install [Poetry] if you haven't already (for more detailed instructions refer to [Poetry installation]):
+    First, install [Poetry] if you haven't already (for more detailed instructions refer to [Poetry installation] in the official documentation):
 
     Then create and initialize a new project:
 

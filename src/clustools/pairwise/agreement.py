@@ -63,11 +63,13 @@ def coassociation_matrix(
     Examples
     --------
     >>> import numpy as np
-    >>> labels = np.array([
-    ... [0, 1, -1, -1],
-    ... [0, 1, 2, -1],
-    ... [0, 1, 1, -1],
-    ... ])
+    >>> labels = np.array(
+    ...     [
+    ...         [0, 1, -1, -1],
+    ...         [0, 1, 2, -1],
+    ...         [0, 1, 1, -1],
+    ...     ]
+    ... )
     >>> C = coassociation_matrix(labels, noise_labels=[-1])
 
     Notes
@@ -131,11 +133,13 @@ def pairwise_ari_matrix(
     --------
     >>> import numpy as np
     >>> from sklearn.metrics import adjusted_rand_score
-    >>> labelings = np.array([
-    ...     [0, 0, 1, 1],
-    ...     [1, 1, 0, 0],
-    ...     [0, 1, 0, 1],
-    ... ])
+    >>> labelings = np.array(
+    ...     [
+    ...         [0, 0, 1, 1],
+    ...         [1, 1, 0, 0],
+    ...         [0, 1, 0, 1],
+    ...     ]
+    ... )
     >>> pairwise_ari_matrix(labelings)
     array([[ 1. ,  1. , -0.5],
            [ 1. ,  1. , -0.5],

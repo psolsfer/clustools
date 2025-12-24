@@ -61,12 +61,6 @@ Ready to contribute? Here's how to set up `clustools` for local development.
    uv run prek install
    ```
 
-   or
-
-   ```bash
-   uv run pre-commit install
-   ```
-
 4. Create a branch for local development:
 
    ```bash

@@ -29,7 +29,7 @@ class FaissClusterMixin(CustomClusterMixin):
     def __getstate__(self) -> dict[str, Any]:
         """Serialize to handle FAISS objects."""
         state = self.__dict__.copy()
-        # Remove the FAISS instance which can't be pickled
+        # Remove the FAISS instance: it can't be pickled
         if "clusterer_instance_" in state:
             del state["clusterer_instance_"]
         return state

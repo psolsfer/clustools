@@ -15,7 +15,7 @@ pip install clustools
 
 ### Q: How do I get started with clustools?
 
-A: Check out the [Usage](usage.md) and [Installation](installation.md) guides.
+A: Check out the [Usage](../getting-started/usage.md) and [Installation](../getting-started/installation.md) guides.
 
 ## Development Issues
 

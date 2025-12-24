@@ -291,7 +291,7 @@ def _init_membership_kmeanspp(
     (3, 100)
     >>> np.allclose(np.sum(u0, axis=0), 1.0)  # Each sample's memberships sum to 1
     True
-    >>> bool(np.all((u0 > 0) & (u0 <= 1))) # All memberships in valid range
+    >>> bool(np.all((u0 > 0) & (u0 <= 1)))  # All memberships in valid range
     True
     """
     # Get k-means++ centroids directly
