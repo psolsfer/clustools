@@ -1,3 +1,14 @@
+## v0.3.3 (2025-12-26)
+
+### Feat
+
+- added skater clustering
+- change weight arguments for cluster_similarity_matrix
+
+### Refactor
+
+- update __init__ of pairwise module
+
 ## v0.3.2 (2025-09-30)
 
 ### Feat
