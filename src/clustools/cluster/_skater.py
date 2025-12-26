@@ -15,7 +15,7 @@ from sklearn.utils.validation import validate_data
 from clustools.cluster.custom_cluster_mixin import CustomClusterMixin
 from clustools.metrics.internal import compute_inertia
 
-# ruff: noqa: N803
+# ruff: noqa: N803, N806
 
 
 def _scale_data(
@@ -211,7 +211,7 @@ def _compute_edge_dissimilarity(
             edge_list.extend(edges)
         if not edge_list:
             return (-1, -1, 0.0)
-        rows, cols = zip(*edge_list)
+        rows, cols = zip(*edge_list, strict=True)
         rows = np.array(rows)
         cols = np.array(cols)
 
@@ -329,7 +329,7 @@ def _build_cluster_edge_map(
     rows, cols = mst.nonzero()
     cluster_edges: dict[int, list[tuple[int, int]]] = {}
 
-    for i, j in zip(rows, cols):
+    for i, j in zip(rows, cols, strict=True):
         if labels[i] == labels[j]:
             label = labels[i]
             if label not in cluster_edges:
@@ -487,7 +487,7 @@ class SKATER(CustomClusterMixin):
         self.random_state = random_state
 
     @_fit_context(prefer_skip_nested_validation=True)
-    def fit(self, X: ArrayLike, y: Any = None) -> "SKATER":
+    def fit(self, X: ArrayLike, y: Any = None) -> "SKATER":  # noqa: C901
         """Compute SKATER clustering.
 
         Parameters
@@ -554,7 +554,7 @@ class SKATER(CustomClusterMixin):
         # FIXME Slow loop...
         while next_label < self.n_clusters:
             # Vectorized edge scoring
-            edge_i, edge_j, dissimilarity = _compute_edge_dissimilarity(
+            edge_i, edge_j, _ = _compute_edge_dissimilarity(
                 mst, distances, labels, stats, cluster_edges
             )
 
